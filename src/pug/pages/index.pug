@@ -1,7 +1,37 @@
 extends ../layout/main
 
 block variables
-    - let title = 'Bootstrap';
-    - let description = 'Bootstrap practice';
+    - let title = 'Animation';
+    - let description = 'Animation practice';
     - let pageClass = 'page-wrapper';
 block page
+
+    h1.title Chose your side
+
+    .menu
+        input.menu-toggle(
+            type="checkbox"
+            id="toggle"
+        )
+        label.menu-starwars(
+            for="toggle"
+        )
+            span.menu-starwars__sword.menu-starwars__sword_sith.scale-up-top
+            span.menu-starwars__sword.menu-starwars__sword_yoda
+            span.menu-starwars__sword.menu-starwars__sword_jedi
+
+            .menu-img
+                img.menu-img__vader(
+                src="assets/img/vader.png"
+                )
+                img.menu-img__yoda(
+                src="assets/img/yoda.png"
+                )
+
+                img.menu-img__allince(
+                src="assets/img/rebel_alliance.svg"
+                )
+
+                img.menu-img__empire(
+                src="assets/img/galactic_empire.svg"
+                )
